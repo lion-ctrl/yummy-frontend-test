@@ -1,13 +1,171 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+* Yummy Form CSS Documentation
+* 05/30/2021
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Base Styles
+- Utilities
+- Components
+    -- alert
+    -- btn
+- Custom Styles
+    -- main
+    -- form
+*/
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  background: linear-gradient(to right, #049a9b, #45b465);
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Components
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* -- alert */
+.alert {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    width: 100%;
+    border: 1px solid transparent;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.alert.alert-danger {
+  color: #a12029;
+  background-color: #f8d7da;
+}
+
+.alert.alert-success {
+  background-color: #d1e7dd;
+  color: #346032;
+}
+
+/* -- btn */
+.btn {
+  margin-top: 5rem;
+	padding: 1.5rem;
+	text-align: center;
+	color: black;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: block;
+	border: none;
+	flex: 0 0 100%;
+	width: 100%;
+  cursor: pointer;
+  transition: .5s ease background-color;
+  font-size: 1.6rem;
+}
+
+.btn-primary {
+  background-color: #049a9b;
+}
+
+.btn:hover {
+  background-color: #45b465;
+}
+
+/* Custom Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* -- main */
+.main {
+  width: 100%;
+  margin: 10rem 0;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.main__title {
+  text-align: center;
+  margin: 2rem 0;
+}
+.main__title-logo {
+  background: linear-gradient(to right, #049a9b, #45b465);
+  background-size: 100%;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+}
+
+.main__warning {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px){
+  .main {
+    width: 60%;
+  }
+}
+
+/* -- form */
+.form .form__field {
+  padding: 0.5rem 2rem;
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.form .form__field label {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+form .form__field input {
+	padding: 1rem;
+  font-size: 1.6rem;
+	border: 1px solid #e1e1e1;
+  width: 100%;
+}
+@media (min-width: 768px){
+
+  .form .form__field {
+    flex-direction: row;
+  }
+  
+  .form .form__field label {
+    flex: 0 0 100px;
+    margin-bottom: 0;
+  }
+  
+  form .form__field input {
+    flex: 1;
+  }
+}
+
