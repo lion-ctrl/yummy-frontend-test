@@ -26,6 +26,10 @@ const Map = (props) => {
 		},
 	});
 
+	/**
+	 * function that takes the coordinates when the marker is finished moving
+	 * @returns {void}
+	 */
 	const onMarkerDragEnd = (e) => {
 		let lat = e.latLng.lat();
 		let lng = e.latLng.lng();
@@ -47,6 +51,10 @@ const Map = (props) => {
 		props.setLocation({ lat: lat.toString(), long: lng.toString() });
 	};
 
+	/**
+	 * function that takes the coordinates of the site in the search
+	 * @returns {void}
+	 */
 	const placeSelected = (place) => {
 		const address = place.formatted_address;
 		const lat = place.geometry.location.lat();

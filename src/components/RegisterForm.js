@@ -15,6 +15,10 @@ const RegisterForm = ({ setAlert }) => {
 
 	const { name, phone, idCode } = data;
 
+	/**
+	 * This function change the dataForm state
+	 * @returns {void}
+	 */
 	const handleChange = (e) => {
 		setData({
 			...data,
@@ -22,6 +26,10 @@ const RegisterForm = ({ setAlert }) => {
 		});
 	};
 
+	/**
+	 * This function sends the form to backend
+	 * @returns {void}
+	 */
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (name === "" || phone === "" || idCode === "") {
